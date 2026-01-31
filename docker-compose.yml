@@ -1,0 +1,17 @@
+services:
+  moltbot:
+    build:
+      dockerfile: Dockerfile
+    container_name: openclawbot
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    ports:
+      - "${GATEWAY_PORT}:${GATEWAY_PORT}"
+
+    volumes:
+      - .:/webapp/
+      - ./.openclaw/:/root/.openclaw/
+    command: ["openclaw", "gateway"]
