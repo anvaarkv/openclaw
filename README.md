@@ -1,3 +1,3 @@
-## After creating the image 
+## After creating the image, Run the following command
 
-### openclaw onbaord and follow the process
+ - openclaw onboard --install-daemon
